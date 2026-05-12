@@ -1,4 +1,4 @@
-** Day 1: Create a Python Virtual Environment for ML **
+**Day 1: Create a Python Virtual Environment for ML**
 
 The xFusionCorp Industries data science team needs a standardised Python environment for their new ML project. Set up a virtual environment with the required ML libraries on the controlplane host.
 Create a Python virtual environment named ml-env under /root/code/ using python3 -m venv.
@@ -7,37 +7,37 @@ Generate a requirements.txt file using pip freeze and save it at /root/code
 
 o set up the standardized Python environment for the xFusionCorp Industries data science team, follow these steps on the controlplane host.
 
-** 1. Create the Virtual Environment **
+**1. Create the Virtual Environment**
 First, ensure the directory exists and then create the ml-env virtual environment.
 
 Bash
 mkdir -p /root/code/
 python3 -m venv /root/code/ml-env
 
-** 2. Activate and Install Packages **
+**2. Activate and Install Packages**
 Activate the environment to ensure the libraries are installed within the isolated container rather than the system Python.
 
 Bash
-** Activate the environment **
+**Activate the environment**
 source /root/code/ml-env/bin/activate
 
-** Upgrade pip (recommended for stability) **
+**Upgrade pip (recommended for stability)**
 pip install --upgrade pip
 
-** Install the required ML libraries **
+**Install the required ML libraries**
 pip install numpy pandas scikit-learn matplotlib
 
-** 3. Generate requirements.txt**
+**3. Generate requirements.txt**
 Finally, use pip freeze to capture the specific versions of the installed packages and save the output to the requested location.
 
-** Bash **
+**Bash**
 pip freeze > /root/code/requirements.txt
 
-** Verification **
+**Verification**
 To verify the setup, you can check that the file exists and contains the expected libraries:
 
 Check file existence: ls -l /root/code/requirements.txt
 
 Check file content: grep -E "numpy|pandas|scikit-learn|matplotlib" /root/code/requirements.txt
 
-** Deactivate: Once finished, you can exit the environment by simply typing deactivate. **
+**Deactivate: Once finished, you can exit the environment by simply typing deactivate.**
