@@ -17,10 +17,9 @@ From the project directory, compile the corrected specification into a pinned lo
 
 The resulting requirements.txt must pin each of the four top-level packages to an exact version using ==, and must also include the transitive dependencies that uv resolved.
 
-**Solution: **
+# Solution:
 
 cd /root/code/fraud-detection/
-# View the current content to identify errors
 cat requirements.in
 
 cat <<EOF > requirements.in
